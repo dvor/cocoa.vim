@@ -9,6 +9,10 @@
 "          for you, just comment out the next line.
 ru after/syntax/cocoa_keywords.vim
 
+if &filetype == "objcpp"
+    set filetype=objc
+endif
+
 syn match objcDirective '@synthesize\|@property\|@optional\|@required' display
 syn keyword objcType IBOutlet IBAction Method
 syn keyword objcConstant YES NO TRUE FALSE
